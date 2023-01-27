@@ -1,0 +1,195 @@
+body{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+div.wrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #3586ff;
+    justify-content: center;
+    align-items: items;
+    text-align: center;
+    padding-top: 20%;
+  }
+  .wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(Images/wave.png);
+    mix-blend-mode: screen;
+    background-size: 1000px 100px;
+    animation: animate 3s ease-in-out infinite;
+  }
+  .wave#wave1{
+    z-index:1000;
+    opacity:1;
+    background-position-x: 400px;
+  }
+  .wave#wave2{
+    z-index:999;
+    opacity:0.5;
+    background-position-x: 300px;
+  }
+  .wave#wave3{
+    z-index:998;
+    opacity:0.2;
+    background-position-x: 200px;
+  }
+  .wave#wave4{
+    z-index:998;
+    opacity:0.7;
+    background-position-x: 100px;
+  }
+  @keyframes animate{
+    0%,100%{
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(15px);
+    }
+  }
+p{
+  font-size: 5em;
+  font-weight: bold;
+  background: linear-gradient(rgb(97, 25, 74),rgb(10, 49, 66),rgb(103, 65, 134));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+div.wrapper button:hover{
+  font-size: 22px;
+  background-color: rgb(1,23,56);
+  box-shadow: 8px 8px 4px rgb(170, 80, 119);
+  margin-top: 8px;
+}
+div.container{
+  background: linear-gradient(rgb(1,23,56),rgb(13, 126, 231),rgb(19, 67, 89));
+  z-index: 1001;
+  max-width: 500px;
+  justify-content: center;
+  align-items: center;
+}
+div.container img{
+  margin: 15px;
+  border-radius: 40px;
+}
+div#date{
+  font-size: 32px;
+  font-family: serif;
+  font-weight: bold;
+  color: brown;
+  position: absolute;
+  margin-left: 250px;
+  margin-top: 250px;
+}
+div.addTask{
+  padding: 20px;
+  margin: 5px 20px 10px 25px;
+  font-size: 22px;
+}
+div.addTask button{
+  background-color: rgb(3, 38, 34);
+  color: white;
+  font-weight: bold;
+  margin-left: 4px;
+}
+div.addTask input{
+  color: navy;
+  font-family: serif;
+  box-shadow: 5px 5px rgb(158, 191, 224);
+}
+div.addTask button:hover{
+  background: linear-gradient(#0484fc,#099ffc);
+  box-shadow: 3px 3px silver;
+}
+
+.Complete{
+  background: linear-gradient(rgb(1,5,6),rgb(16, 152, 107));
+  padding: 15px;
+  margin: 15px 15px 15px 15px;
+  font-weight: bold;
+  color: white;
+}
+.notComplete{
+  background: linear-gradient(rgb(94, 23, 72),rgb(241, 109, 243));
+  font-weight: bold;
+  padding: 15px;
+  margin: 15px;
+  color: white;
+}
+ol li button.checkbtn,.dltbtn,.edit{
+  background: linear-gradient(rgb(101, 181, 230),rgb(22, 173, 227));
+  border: 2px silver;
+  padding: 8px;
+  margin: 5px 8px 8px;
+  display: flex-d;
+  flex-direction: row-reverse;
+  float: right;
+  border-radius: 30px;
+}
+h6,h5{
+  text-align: center;
+}
+ol{
+  list-style: none;
+}
+ol li{
+  width: 100%;
+  margin-left: 10px;
+  padding: 18px;
+  counter-increment: my-counter;
+  height: 60px;
+}
+ol li::before{
+  content: counter(my-counter);
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  text-align: center;
+  background-color: wheat;
+  color: black;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  margin-top: 8px;;
+}
+button.checkbtn:hover{
+  font-size: 22px;
+  color: white;
+  background: green;
+}
+button.dltbtn:hover{
+  font-size: 22px;
+  color: white;
+  background: linear-gradient(rgb(234, 11, 78),rgb(245, 92, 107));
+}
+button.edit:hover{
+  font-size: 20px;
+  color: white;
+  background: rgb(117, 65, 170);
+  font-weight: bold;
+  position: relative;
+}
+ol.Complete li{
+  background: linear-gradient(rgb(30, 100, 123),rgb(25, 46, 67));
+  padding: 5px 8px;
+  margin: 8px 6px;
+  border-radius: 40px;
+}
+ol.notComplete li{
+  background: linear-gradient(rgb(67, 14, 45),rgb(116, 52, 80));
+  padding: 5px 8px;
+  margin: 8px 6px;
+  border-radius: 40px;
+}
+input.text{
+  margin: 8px;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  width: 40%;
+  border: 'none';
+}
